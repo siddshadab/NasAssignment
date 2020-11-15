@@ -1,0 +1,49 @@
+Requirements
+Python 3.9.0,rest_framework,django-environ,
+
+Implementation Details
+Data:
+
+Park a Car
+get slots details if empty
+get car details if parked
+checkout car
+
+
+API Features
+Post Cars which will take auto empty  slot number  POST  http://127.0.0.1:8000/parkingSystem/
+Listing all the Cars with slot number stored in the system  GET  http://127.0.0.1:8000/parkingSystem/
+Filtering slots which is having cars park or slot empty then no records will return       GET  http://127.0.0.1:8000/parkingSystem/?slot_number=1
+Filtering empty cars with slots  http://127.0.0.1:8000/parkingSystem/?car_number=1
+checkout car  127.0.0.1:8000/check_out/ input slot number for clearing slot and update with out date time
+slot declation on .env file
+Throttling with 10 seconds with 10 request
+No exception handling perfom on fields level
+
+
+How to run
+If running on local machine do
+
+python manage.py runserver
+./manage.py runserver
+You can now open the API in your browser at http://127.0.0.1:8000/parkingSystem/ , and view /Post your parking 'Car' API. For this exercise we are not using authentication. So all users have full CRUD access.
+
+If you don't use the database provided on your local machine you need to do the migrations and create a super user.
+
+python manage.py createsuperuser
+
+You can also interact with the API using command line tools such as curl. For example, to list the match endpoint:
+
+Project created using Pycharm IDE
+
+Example
+
+Let's take a look at a quick example of using REST framework to build a simple model-backed API.
+
+Startup up a project like so...
+
+pip install -r requirements.txt
+python manage.py runserver
+
+
+
